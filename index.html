@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      margin-top: 50px;
+      max-width: 300px;
+      border-radius: 15px;
+    }
+    h1 {
+      color: #ff4d4d;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 20px;
+      margin: 30px;
+      color: #333;
+    }
+    .button-container {
+      margin-top: 50px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin: 20px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img src="cat.gif" alt="Please forgive me cat">
+  <h1>I'm so sorry 😞</h1>
+  <p>I know I hurt you, and I wish I could take it back.  
+  You mean so much to me. Will you please forgive me?</p>
+
+  <div class="button-container">
+    <button id="yesBtn" onclick="thankYou()">Ok, I forgive you ❤️</button>
+    <button id="noBtn">No 😠</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    function thankYou() {
+      document.body.innerHTML = "<h1>Thank you ❤️</h1><p>You just made my whole day. Let’s talk soon?</p>";
+    }
+  </script>
+</body>
+</html>
